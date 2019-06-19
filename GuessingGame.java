@@ -1,28 +1,26 @@
-// Name : Tanner Beaulieu
+   // Name : Tanner Beaulieu
 // Class : CIST1400-502
 // Colleagues : NAME/EMAIL OF ANYONE YOU WORKED WITH, INCLUDING TUTORS
-// Resources : Program 03 Reference Sheet
+// Resources : Program 04 Reference Sheet
 
-// The purpose of this program is to calculate various text-leveling metrics of a  
-// document based on some of its characeristics
+// The purpose of this program is to ask the user a series of questions
+// in attempt to guess what the user was thinking of
 
 
 import java.util.Scanner;
 
 public class GuessingGame
 {
-   public static void main(String[] args)
-   
+   public static void main (String[] args)
    {
-      
-      
-      System.out.println("Think of something and I'll try to guess what you're thinking of. \nIs it a living animal, living plant, or non-living thing?");
+   
+         System.out.println("Think of something and I'll try to guess what you're thinking of. \nIs it a living animal, living plant, or non-living thing?");
       Scanner input = new Scanner(System.in);
-      String prompt = input.nextLine().toLowerCase();
-      switch (prompt)
-      {
-         case "living animal": 
-            System.out.println("Does it have feathers, fur, or neither?");
+       String prompt = input.nextLine().toLowerCase();
+       switch(prompt)
+       {     
+             case "living animal":
+               System.out.println("Does it have feathers, fur, or neither?");
             prompt = input.nextLine().toLowerCase();
             switch(prompt)
             {
@@ -236,8 +234,10 @@ public class GuessingGame
                                           System.out.println("Invalid response.");
                                           System.out.println("You should try again!");
                                           break;
+                                    
                                     }
                                     break;
+                                  
                                  case "no": //no yellow
                                     System.out.println("Is it a blue jay?");
                                     prompt = input.nextLine().toLowerCase();
@@ -266,6 +266,7 @@ public class GuessingGame
                                     System.out.println("You should try again!");
                                     break;
                               }
+                              break;
                            default: //invalid meat
                               System.out.println("Invalid response.");
                               System.out.println("You should try again!");
@@ -276,6 +277,7 @@ public class GuessingGame
                      default: //invalid soccer ball 
                         System.out.println("Invalid response.");
                         System.out.println("You should try again!");
+                     
                   }
                   break;      
                    
@@ -516,12 +518,13 @@ public class GuessingGame
                                     }
                                     break;
                                  default: //invalid stripes
-                                    System.out.println("Invalid response.");
+                                    System.out.println("Invalid response .");
                                     System.out.println("You should try again!");
                                     break;
                               }
+                              break;
                            default: //invalid meat
-                              System.out.println("Invalid response.");
+                              System.out.println("Invalid response .");
                               System.out.println("You should try again!");
                               break;
                         }
@@ -530,9 +533,10 @@ public class GuessingGame
                      default: //invalid domesticated
                         System.out.println("Invalid response.");
                         System.out.println("You should try again!");
-                     }
-                     break;
                      
+                     
+                  break;
+                    }
                   case "neither": //neither fur nor feathers
                   System.out.println("Does it swim?");
                   prompt = input.nextLine().toLowerCase();
@@ -654,7 +658,7 @@ public class GuessingGame
                               break;
                            
                            default: //invalid mammal
-                              System.out.println("Invalid response.");
+                              System.out.println("Invalid response .");
                               System.out.println("You should try again!");
                               break;
                         }
@@ -685,7 +689,7 @@ public class GuessingGame
                                           break;
                                     
                                        default: //invalid dragon
-                                          System.out.println("Invalid response.");
+                                          System.out.println("Invalid response .");
                                           System.out.println("You should try again!");
                                           break;
                                     }
@@ -763,13 +767,13 @@ public class GuessingGame
                                           break;
                                     
                                        default: //invalid rat snake
-                                          System.out.println("Invalid response.");
+                                          System.out.println("Invalid response .");
                                           System.out.println("You should try again!");
                                           break;
                                     }
                                     break;
                                  default: //invalid venemous
-                                    System.out.println("Invalid response.");
+                                    System.out.println("Invalid response .");
                                     System.out.println("You should try again!");
                                     break;
                               }
@@ -780,20 +784,20 @@ public class GuessingGame
                               break;
                         }
                      
-                     
+                     break;
                      default: //invalid swim
                         System.out.println("Invalid response.");
                         System.out.println("You should try again!");
                      }  
-                     
-                     break;
-               
-        case "living plant": //living plant
-               System.out.println("Is it a tree?");
-            prompt = input.nextLine().toLowerCase();
-            switch(prompt)
-            {
-               case "yes":
+                  break;
+                  }
+                  break;
+               case "living plant": //living plant
+                  System.out.println("Is it a tree?");
+                  prompt = input.nextLine().toLowerCase();
+                  switch(prompt)
+                  {
+                 case "yes":
                   System.out.println("Is it deciduous?");
                   prompt = input.nextLine().toLowerCase();
                   switch(prompt)
@@ -1296,6 +1300,7 @@ public class GuessingGame
                      default: //invalid flower
                         System.out.println("Invalid response.");
                         System.out.println("You should try again!");
+                        
                      }
                      break;
                   default: //invalid tree
@@ -1303,16 +1308,654 @@ public class GuessingGame
                   System.out.println("You should try again!");
             
                 }
-            }
-      }
-     
-   }
-}         
-      
-      
-      
-      
-      
-   
-
-   
+                break;
+            case "non-living thing": //non-living 
+            System.out.println("Is it man made?");
+            prompt = input.nextLine().toLowerCase();
+            switch(prompt)
+            {
+               case "yes":
+                  System.out.println("Is it furniture, textile, or electronic?");
+                  prompt = input.nextLine().toLowerCase();
+                  switch(prompt)
+                  
+                  {
+                     case "furniture": //furniture
+                        System.out.println("Do you sleep on it?");
+                        prompt = input.nextLine().toLowerCase();
+                        switch(prompt)
+                        {
+                           case "yes": //yes sleep
+                              System.out.println("Is it made for sitting?");
+                              prompt = input.nextLine().toLowerCase();
+                              
+                              switch(prompt)
+                              {
+                                
+                                 case "yes": //yes sitting
+                                    System.out.println("Is it a sofa?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                       case "yes": //yes sofa
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                          
+                                       
+                                       case "no": //no sofa
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                        
+                                       default: //invalid sofa
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no sitting
+                                    System.out.println("Is it a bed?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                        
+                                       case "yes": //yes bed
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                       case "no": //no bed
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                       default: //invalid bed
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                    }     
+                                    break;
+                                 default: //invalid sitting
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }   
+                              break;
+                           case "no": //no sleep
+                              System.out.println("Is it made for sitting?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch(prompt)
+                              {
+                                 case "yes": //yes sitting
+                                    System.out.println("Is it a loveseat?"); 
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                       case "yes": //yes love seat
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no love seat
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid love seat
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no sitting
+                                    System.out.println("Is it a table?");
+                                    prompt= input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                       case "yes": //yes table
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no table
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid table
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid sitting
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }    
+                              break;
+                           
+                           default: //invalid sleep
+                              System.out.println("Invalid response.");
+                              System.out.println("You should try again!");
+                              break;
+                        }
+                        break;
+                     case "textile": //textile
+                        System.out.println("Is it wearable?");
+                        prompt = input.nextLine().toLowerCase();
+                        switch(prompt)
+                        {
+                           case "yes": //yes wearable
+                              System.out.println("Does it go on your head?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch(prompt)
+                              {
+                                 case "yes": //yes on head
+                                    System.out.println("Is it earmuffs?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                       case "yes": //yes earmuffs
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no earmuffs
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid earmuffs
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no on head
+                                    System.out.println("Is it a coat?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                       case "yes": //yes coat
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no coat
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid coat
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid head
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }
+                              break;
+                           case "no": //not wearable
+                              System.out.println("Does it go on the floor?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch (prompt)
+                              {
+                                 case "yes": //yes floor
+                                    System.out.println("Is it a rug?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                             
+                                    
+                                       case "yes": //yes rug
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                             
+                                       case "no": //no rug
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid rug
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                    }
+                                    break;
+                                  
+                                 case "no": //no floor
+                                    System.out.println("Is it a blanket?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                             
+                                    
+                                       case "yes": //yes blanket
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                             
+                                       case "no": //no blanket
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid blanket
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid floor
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }
+                              break;
+                           default: //invalid wearable
+                              System.out.println("Invalid response.");
+                              System.out.println("You should try again!");
+                              break;
+                        }
+                        break;
+                     
+                     case "electronic": //electronic
+                     System.out.println("Does it prepare food?");
+                     prompt = input.nextLine().toLowerCase();
+                     switch(prompt)
+                     {
+                        case "yes": //yes food
+                              System.out.println("Does it cook a turkey?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch(prompt)
+                              {
+                                 case "yes": //yes turkey
+                                    System.out.println("Is it an oven?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                       case "yes": //yes oven
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no oven
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid pven
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no turkey
+                                    System.out.println("Is it a blender?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                       case "yes": //yes blender
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no blender
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid blender
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid turkey
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }
+                              break;
+                           case "no": //no food
+                              System.out.println("Does it play music?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch (prompt)
+                              {
+                                 case "yes": //yes music
+                                    System.out.println("Is it a keyboard?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                             
+                                    
+                                       case "yes": //yes keyboard
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                             
+                                       case "no": //no keyboard
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid keyboard
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                    }
+                                    break;
+                                    case "no": //no music
+                                        System.out.println("Is it a lamp?");
+                                        prompt = input.nextLine().toLowerCase();
+                                        switch (prompt)
+                                        {
+                                          case "yes": //yes lamp
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                             
+                                       case "no": //no lamp
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid lamp
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                    }
+                                       break;
+                                   default: //invalid music
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                                    }
+                      break;           
+                     default: //invalid textile/furniture/electronic
+                        System.out.println("Invalid response.");
+                        System.out.println("You should try again!");
+                        break;
+                     }
+                    break;
+                  }
+                  break;
+                   
+                        
+                  case "no": // not manmade
+                  System.out.println("Is it water based?");
+                  prompt = input.nextLine().toLowerCase();
+                  switch(prompt)
+                  
+                  {
+                     case "yes": //yes water based
+                        System.out.println("Is it fresh water?");
+                        prompt = input.nextLine().toLowerCase();
+                        switch(prompt)
+                        {
+                           case "yes": //yes fresh
+                              System.out.println("Is it still?");
+                              prompt = input.nextLine().toLowerCase();
+                              
+                              switch(prompt)
+                              {
+                                
+                                 case "yes": //yes still
+                                    System.out.println("Is it a pond?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                       case "yes": //yes pond
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                          
+                                       
+                                       case "no": //no pond
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                        
+                                       default: //invalid pond
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no still
+                                    System.out.println("Is it a brook?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                        
+                                       case "yes": //yes brook
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                       case "no": //no brook
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                       default: //invalid brook
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                    }     
+                                    break;
+                                 default: //invalid still
+                                    System.out.println("Invalid response.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }   
+                              break;
+                           case "no": //no fresh
+                              System.out.println("Is it frozen?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch(prompt)
+                              {
+                                 case "yes": //yes frozen
+                                    System.out.println("Is it a glacier?"); 
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                       case "yes": //yes glacier
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no glacier
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid glacier
+                                          System.out.println("Invalid response glacier.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no frozen
+                                    System.out.println("Is it a sea?");
+                                    prompt= input.nextLine().toLowerCase();
+                                    switch(prompt)
+                                    {
+                                       case "yes": //yes sea
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no sea
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid sea
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid frozen
+                                    System.out.println("Invalid response frozen.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }    
+                              break;
+                           
+                           default: //invalid fresh
+                              System.out.println("Invalid response.");
+                              System.out.println("You should try again!");
+                              break;
+                        }
+                        break;
+                     case "no": //not water based
+                        System.out.println("Is it flat?");
+                        prompt = input.nextLine().toLowerCase();
+                        switch(prompt)
+                        {
+                           case "yes": //yes flat
+                              System.out.println("Is it near water?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch(prompt)
+                              {
+                                 case "yes": //yes near
+                                    System.out.println("Is it a beach?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                       case "yes": //yes beach
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no beach
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid beach
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no near
+                                    System.out.println("Is it a desert?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                       case "yes": //yes desert
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       case "no": //no desert
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid desert
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid near water
+                                    System.out.println("Invalid response near wa.");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }
+                              break;
+                           case "no": //no flat
+                              System.out.println("Does it have lava?");
+                              prompt = input.nextLine().toLowerCase();
+                              switch (prompt)
+                              {
+                                 case "yes": //yes lava
+                                    System.out.println("Is it a volcano?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                             
+                                    
+                                       case "yes": //yes volcano
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                             
+                                       case "no": //no volcano
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid volcano
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 case "no": //no lava
+                                    System.out.println("Is it a bluff?");
+                                    prompt = input.nextLine().toLowerCase();
+                                    switch (prompt)
+                                    {
+                                             
+                                    
+                                       case "yes": //yes bluff
+                                          System.out.println("I am correct!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                             
+                                       case "no": //no bluff
+                                          System.out.println("Oh, I am wrong!");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    
+                                       default: //invalid bluff
+                                          System.out.println("Invalid response.");
+                                          System.out.println("You should try again!");
+                                          break;
+                                    }
+                                    break;
+                                 default: //invalid lava
+                                    System.out.println("Invalid response .");
+                                    System.out.println("You should try again!");
+                                    break;
+                              }
+                              break;
+                           default: //invalid flat
+                              System.out.println("Invalid response flat.");
+                              System.out.println("You should try again!");
+                              break;
+                        }
+                        break;
+                     
+                     default: //invalid water based
+                        System.out.println("Invalid response.");
+                        System.out.println("You should try again!");
+                     
+                     break;
+                  }
+                  break;
+                  
+                  default: //invalid manmade
+                  System.out.println("Invalid response.");
+                  System.out.println("You should try again!");   
+                  break;
+                  }
+                  break;
+             default: //invalid living thing/plant/nonliving
+             System.out.println("Invalid response");
+             System.out.println("You should try again!"); 
+             }
+}
+}
